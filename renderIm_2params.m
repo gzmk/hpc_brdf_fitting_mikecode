@@ -59,14 +59,14 @@ mycell = {ro_s, ro_d, alphau,light};
 
 
 T = cell2table(mycell, 'VariableNames', {'ro_s' 'ro_d' 'alphau' 'light'});
-% writetable(T,'/scratch/gk925/hpc_brdf_fitting/sphere_3params_Conditions.txt','Delimiter','\t')
-writetable(T,'/Local/Users/gizem/Documents/Research/GlossBump/hpc_brdf_fitting_mikecode/sphere_3params_Conditions.txt','Delimiter','\t')
+writetable(T,'/scratch/gk925/hpc_brdf_fitting_mikecode/sphere_3params_Conditions.txt','Delimiter','\t')
+% writetable(T,'/Local/Users/gizem/Documents/Research/GlossBump/hpc_brdf_fitting_mikecode/sphere_3params_Conditions.txt','Delimiter','\t')
 
 %% Rendering bit
 
 % Set preferences
-% setpref('RenderToolbox3', 'workingFolder', '/scratch/gk925/hpc_brdf_fitting');
-setpref('RenderToolbox3', 'workingFolder', '/Local/Users/gizem/Documents/Research/GlossBump/hpc_brdf_fitting_mikecode');
+setpref('RenderToolbox3', 'workingFolder', '/scratch/gk925/hpc_brdf_fitting_mikecode');
+% setpref('RenderToolbox3', 'workingFolder', '/Local/Users/gizem/Documents/Research/GlossBump/hpc_brdf_fitting_mikecode');
 
 
 % use this scene and condition file. 
@@ -111,8 +111,8 @@ montageFile = [montageName '.png'];
     MakeMontage(radianceDataFiles, montageFile, toneMapFactor, isScale, hints);
 
 % load the monochromatic image and display it
-% imPath = ['/scratch/gk925/hpc_brdf_fitting/', hints.recipeName, '/renderings/Mitsuba/test_sphere-001.mat']
-imPath = ['/Local/Users/gizem/Documents/Research/GlossBump/hpc_brdf_fitting_mikecode/', hints.recipeName, '/renderings/Mitsuba/test_sphere-001.mat']
+imPath = ['/scratch/gk925/hpc_brdf_fitting_mikecode/', hints.recipeName, '/renderings/Mitsuba/test_sphere-001.mat']
+% imPath = ['/Local/Users/gizem/Documents/Research/GlossBump/hpc_brdf_fitting_mikecode/', hints.recipeName, '/renderings/Mitsuba/test_sphere-001.mat']
 
 load(imPath, 'multispectralImage');
 im2 = multispectralImage;

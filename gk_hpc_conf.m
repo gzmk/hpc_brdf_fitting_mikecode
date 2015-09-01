@@ -35,7 +35,7 @@ InitializeRenderToolbox(true);
 
 %% Tell RenderToolbox3 where to save outputs.
 % choose Matlab's default "user folder"
-myFolder = fullfile('/scratch/gk925/hpc_brdf_fitting');
+myFolder = fullfile('/scratch/gk925/hpc_brdf_fitting_mikecode');
 
 % or choose any folder that you want RenderToolbox3 to write to
 %myFolder = 'choose/your/output/folder';
