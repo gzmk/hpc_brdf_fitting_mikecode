@@ -27,7 +27,7 @@ fitname1 = '40percent_2param.mat';
 fitname2 = '40percent_1param.mat';
 for i = 1:iter
     
-    [XBest2, BestF2] = gridsearch(@renderIm_2params, LB_2, UB_2, 10, 0.8, 1e-7, 1000, 1, 1);
+    [XBest2, BestF2] = gridsearch(@renderIm_2params, LB_2, UB_2, 10, 0.5, 1e-7, 1000, 1, 1);
 %     [XBest2,BestF2,Iters2] = Grid_Search(2, LB_2', UB_2', NumDiv_2, MinDeltaX_2, 1e-7, 1000, 'renderIm_2params');
     sprintf('This is XBest2:');
     XBest2;
