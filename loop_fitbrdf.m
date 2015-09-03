@@ -27,7 +27,7 @@ fitname1 = '40percent_2param.mat';
 fitname2 = '40percent_1param.mat';
 for i = 1:iter
     
-    [XBest2, BestF2] = gridsearch(@renderIm_2params, LB_2, UB_2, 5, 0.5, 1e-7, 500, 1, 1);
+    [XBest2, BestF2] = gridsearch(@renderIm_2params, LB_2, UB_2, 5, 0.5, 1e-7, 10, 1, 1);
 %     [XBest2,BestF2,Iters2] = Grid_Search(2, LB_2', UB_2', NumDiv_2, MinDeltaX_2, 1e-7, 1000, 'renderIm_2params');
     sprintf('This is XBest2:');
     XBest2;
@@ -48,7 +48,7 @@ for i = 1:iter
     save(imname, 'bestRhos','bestfit_2pr');
     
     sprintf('Fix rho_s: %f and rho_d: %f and fit alpha',XBest2(1),XBest2(2));
-    [XBest1, BestF1] = gridsearch(@renderIm_1params, LB_1, UB_1, 5, 0.5, 1e-7, 500, 1, 1);
+    [XBest1, BestF1] = gridsearch(@renderIm_1params, LB_1, UB_1, 5, 0.5, 1e-7, 10, 1, 1);
 %     [XBest1,BestF1,Iters1] = Grid_Search(1, LB_1, UB_1, NumDiv_1, MinDeltaX_1, 1e-7, 1000, 'renderIm_1params');
     sprintf('This is best alpha: %f',XBest1);
     setGlobalalpha(XBest1(1))
