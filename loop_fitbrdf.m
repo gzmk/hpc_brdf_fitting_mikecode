@@ -61,13 +61,13 @@ for i = 1:iter
     end
     
     sprintf('Fix alphau: %f and fit rho_s and rho_d', XBest1);
-    imname = strcat('/Local/Users/gizem/Documents/Research/GlossBump/hpc_brdf_fitting_mikecode/fit_results/multispectral/', fitname2);
-%     imname = strcat('/scratch/gk925/hpc_brdf_fitting/fit_results/multispectral/', fitname2);
+    % imname = strcat('/Local/Users/gizem/Documents/Research/GlossBump/hpc_brdf_fitting_mikecode/fit_results/multispectral/', fitname2);
+    imname = strcat('/scratch/gk925/hpc_brdf_fitting_mikecode/fit_results/multispectral/', fitname2);
     save(imname, 'bestAlphas','bestfit_1pr');
     
     if i>1 && (converge1<=delta1) && (converge2<=delta2) && (converge3<=delta3)
         sprintf('Parameters converged! Exiting the loop')
-%         break
+        break
     end
     
 end
